@@ -10,7 +10,7 @@ margin-bottom: 15px;
 export const Name = styled.Text`
 font-size: 18px;
 font-weight: bold;
-color: #FFF;
+color: #000;
 `;
 
 export const Description = styled.Text`

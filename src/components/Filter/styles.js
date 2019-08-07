@@ -18,3 +18,8 @@ color: #666;
 margin-top: 5px;
 line-height: 20px;
 `;
+
+export const Footer = styled.View`
+flex-direction: row;
+
+`

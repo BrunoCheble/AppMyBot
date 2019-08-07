@@ -49,7 +49,7 @@ const Main = props => (
       resizeMode="contain"
     />
     <Text style={styles.welcome}>Bem-vindo ao Template Avançado!</Text>
-    <TouchableOpacity onPress={() => props.navigation.navigate('Filter')}>
+    <TouchableOpacity onPress={() => props.navigation.navigate('Service')}>
       <Text>Buscar Serviço</Text>
     </TouchableOpacity>
   </ImageBackground>

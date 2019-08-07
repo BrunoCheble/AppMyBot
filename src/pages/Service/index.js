@@ -3,35 +3,28 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import FilterActions from '~/store/ducks/filters';
+import ServiceActions from '~/store/ducks/services';
 
 import ItemFilter from '~/components/Filter';
 
 import {
-  Container, Form, Input, Submit, List,
+  Container, List, Header, Emails, Interval
 } from './styles';
 
-const Filter = ({ filters, loadFilterRequest }) => {
+const Service = ({ service, loadServiceRequest }) => {
   useEffect(() => {
-    loadFilterRequest();
+    loadServiceRequest(null);
   }, []);
 
   return (
     <Container>
-      <Form>
-        <Input
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholder="Procurar serviço..."
-        />
-        <Submit>
-          <Icon name="add" font-size={22} color="#FFF" />
-        </Submit>
-      </Form>
-
+      <Header>
+        <Emails>Emails: {service.data.emails}</Emails>
+        <Interval>Intervalo aprox.: {service.data.interval}</Interval>
+      </Header>
       <List
         keyboardShouldPersistrTaps="handle"
-        data={filters}
+        data={service.filters}
         keyExtractor={(item, index) => String(item._id)}
         renderItem={({ item, index }) => (
           <ItemFilter data={item} index={index} />
@@ -42,12 +35,12 @@ const Filter = ({ filters, loadFilterRequest }) => {
 };
 
 const mapStateToProps = state => ({
-  filters: state.filter.data,
+  service: state.service,
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators(FilterActions, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators(ServiceActions, dispatch);
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Filter);
+)(Service);

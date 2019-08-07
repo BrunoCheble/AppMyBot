@@ -51,3 +51,19 @@ export const List = styled.FlatList.attrs({
 })`
 margin-top: 20px;
 `;
+
+export const Header = styled.View`
+  background: #54448c;
+  padding: 20px;
+  text-align: center;
+`;
+
+export const Emails = styled.Text`
+  font-size: 14px;
+  color: #fff;
+`;
+
+  export const Interval = styled.Text`
+  font-size: 14px;
+  color: #fff;
+`;  

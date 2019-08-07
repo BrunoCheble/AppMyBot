@@ -1,11 +1,11 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import Main from '~/pages/Main';
-import Filter from '~/pages/Filter';
+import Service from '~/pages/Service';
 
 const Routes = createAppContainer(createSwitchNavigator({
   Main,
-  Filter,
+  Service,
 }));
 
 export default Routes;

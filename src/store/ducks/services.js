@@ -31,4 +31,5 @@ const INITIAL_STATE = Immutable({
  */
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.LOAD_SERVICE_SUCCESS]: (state, { data }) => state.merge({ data }),
+  [Types.LOAD_SERVICE_FAILURE]: (state, {}) => INITIAL_STATE,
 });

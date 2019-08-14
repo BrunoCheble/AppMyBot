@@ -2,11 +2,7 @@ import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 
-export const Container = styled(LinearGradient).attrs({
-  colors: ['#7159c1', '#9B49c1'],
-  start: { x: 0, y: 0 },
-  end: { x: 1, y: 1 },
-})`
+export const Container = styled.View`
   flex: 1;
   padding-top: ${30 + getStatusBarHeight(true)}px;
 `;
@@ -49,7 +45,7 @@ export const List = styled.FlatList.attrs({
   contentContainerStyle: { paddingHorizontal: 20 },
   showVerticalScrollIndicator: false,
 })`
-margin-top: 20px;
+margin-top: 10px;
 `;
 
 export const Header = styled.View`
@@ -59,11 +55,30 @@ export const Header = styled.View`
 `;
 
 export const Emails = styled.Text`
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
 `;
 
-  export const Interval = styled.Text`
-  font-size: 14px;
+export const Interval = styled.Text`
+  font-size: 12px;
   color: #fff;
 `;  
+export const Date = styled.Text`
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+`;  
+
+export const BtnBackModal = styled.TouchableOpacity`
+background: #2793e6;
+justify-content: center;
+border-radius: 4px;
+padding: 20px;
+margin: 20px;
+`;
+
+export const TextBackModal = styled.Text`
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+`;

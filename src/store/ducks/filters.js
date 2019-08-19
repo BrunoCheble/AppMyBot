@@ -9,6 +9,7 @@ const { Types, Creators } = createActions({
   loadFilterRequest: ['search'],
   loadFilterSuccess: ['data'],
   loadFilterFailure: null,
+  saveFilterRequest: ['data']
 });
 
 export const FilterTypes = Types;

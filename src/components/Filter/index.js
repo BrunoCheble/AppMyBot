@@ -16,7 +16,7 @@ const ItemFilter = ({ data, handleModalFilter }) => {
             <QttLinks>{actives.length + '/' + data.adverts.length}</QttLinks>
             <Icon name="star" font-size={22} color="#2793e6" />
           </Links>
-          <Description>{actives.length > 0 ? Moment.utc(actives[0].updatedAt).format('DD/MM/Y - HH:mm:ss') : ''}</Description>
+          <Description>{data.filter != undefined ? actives.length > 0 ? Moment.utc(actives[0].updatedAt).format('DD/MM/Y - HH:mm:ss') : '' : 'Em andamento...'}</Description>
         </Footer>
       </Item>
     </Container>

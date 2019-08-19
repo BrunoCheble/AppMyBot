@@ -15,6 +15,11 @@ font-weight: bold;
 color: #000;
 `;
 
+export const ItemDetail = styled.TouchableOpacity`
+flex-direction: column;
+flex: 1;
+`;
+
 export const Description = styled.Text`
 color: #666;
 font-size: 12px;

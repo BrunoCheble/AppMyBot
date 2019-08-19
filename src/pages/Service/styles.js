@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import LinearGradient from 'react-native-linear-gradient';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 export const Container = styled.View`
@@ -80,5 +79,20 @@ margin: 20px;
 export const TextBackModal = styled.Text`
   font-size: 14px;
   color: #fff;
+  text-align: center;
+`;
+
+export const BtnAddFilter = styled.TouchableOpacity`
+background: #fff;
+justify-content: center;
+border-radius: 4px;
+padding: 20px;
+margin: 20px;
+`;
+
+export const TextAddFilter = styled.Text`
+  font-size: 14px;
+  color: #54448c;
+  font-weight: bold;
   text-align: center;
 `;

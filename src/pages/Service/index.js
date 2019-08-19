@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, List, Header, Emails, Interval, Date, BtnBackModal, TextBackModal } from './styles';
+import { Container, List, Header, Emails, Interval, Date, BtnBackModal, TextBackModal, BtnAddFilter, TextAddFilter } from './styles';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import { ImageBackground, RefreshControl, Modal } from 'react-native';
@@ -14,7 +14,7 @@ import ListAdvert from '~/components/ListAdvert';
 
 import Moment from 'moment';
 
-const Service = ({ service, loadServiceRequest }) => {
+const Service = ({ navigation, service, loadServiceRequest }) => {
 
   const [search, setSearch] = useState('');
   const [refreshing, setRefreshing] = useState(false);
@@ -41,6 +41,7 @@ const Service = ({ service, loadServiceRequest }) => {
   }
 
   useEffect(() => {
+    //
     verifySavedSearch();
   }, []);
 
@@ -54,10 +55,10 @@ const Service = ({ service, loadServiceRequest }) => {
       resizeMode="cover"
     >
       <Modal
-      animationType="slide"
-      transparent={false}
-      visible={modalVisible}
-      onRequestClose={() => {}}>
+        animationType="slide"
+        transparent={false}
+        visible={modalVisible}
+        onRequestClose={() => { }}>
         <ListAdvert adverts={adverts} />
         <BtnBackModal onPress={() => { setModalVisible(false); }}>
           <TextBackModal>Voltar</TextBackModal>
@@ -88,6 +89,13 @@ const Service = ({ service, loadServiceRequest }) => {
             <ItemFilter handleModalFilter={handleModalFilter} data={item} index={index} />
           )}
         />
+        {
+          service.updatedAt != null ? (
+            <BtnAddFilter onPress={() => navigation.navigate('Filter', { service: service._id })}>
+              <TextAddFilter>Adicionar Filtro</TextAddFilter>
+            </BtnAddFilter>
+          ) : (<></>)
+        }
       </Container>
     </ImageBackground>
   );

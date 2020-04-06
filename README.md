@@ -7,6 +7,14 @@
 
 <!-- PROJECT SHIELDS -->
 
+  <h3>Prints da aplicação:</h3>
+  <div>
+  <img width="32%" src="https://img.techpowerup.org/200406/screenshot-20200406-093934-com-appmybot.jpg">
+  <img width="32%" src="https://img.techpowerup.org/200406/screenshot-20200406-093914-com-appmybot.jpg">
+  <img width="32%" src="https://img.techpowerup.org/200406/screenshot-20200406-093826-com-appmybot.jpg">
+  </div>
+<br><br>
+
 [![npm](https://img.shields.io/npm/v/react-native-template-rocketseat-advanced.svg?label=npm%20package)](https://www.npmjs.com/package/react-native-template-rocketseat-advanced)
 [![npm](https://img.shields.io/npm/dt/react-native-template-rocketseat-advanced.svg)](https://www.npmjs.com/package/react-native-template-rocketseat-advanced)
 [![GitHub issues](https://img.shields.io/github/issues-raw/rocketseat/react-native-template-rocketseat-advanced.svg)](https://github.com/Rocketseat/react-native-template-rocketseat-advanced/issues)
